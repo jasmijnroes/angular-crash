@@ -9,5 +9,9 @@ export class ButtonComponent {
   @Input() text: string = '';
   @Input() color: string = '';
 
-  // constructor() {}
+  onClick() {
+    console.log("add");
+  }
+  // Je kunt hier de informatie wat er moet gebeuren inzetten, maar is beter in een ander bestand zodat je deze button vaker kunt gebruiken.
+
 }
