@@ -1,4 +1,4 @@
-import { Component, Input  } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,10 +8,11 @@ import { Component, Input  } from '@angular/core';
 export class ButtonComponent {
   @Input() text: string = '';
   @Input() color: string = '';
+  @Output() btnClick = new EventEmitter()
 
   onClick() {
-    console.log("add");
+    this.btnClick.emit();
   }
-  // Je kunt hier de informatie wat er moet gebeuren inzetten, maar is beter in een ander bestand zodat je deze button vaker kunt gebruiken.
+  // Je kunt hier de informatie wat er moet gebeuren inzetten, maar is beter in een ander bestand zodat je deze button vaker kunt gebruiken. Daarom gebruiken we hier een eventemitter
 
 }
