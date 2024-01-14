@@ -1,1 +1,7 @@
-<p>tasks works!</p>
+<!-- om over de array te loopen kun je hetvolgende doen om van alle tasks de text te laten zien: -->
+<!-- <p *ngFor="let task of tasks">{{ task.text }}</p> -->
+
+<!-- maar dat is om het in een paragraph te zetten, wij willen het in een component hebben dus die maken we nu ook aan. -->
+
+<!-- ipv een p vervangen we het met de component. ook pass in a property of task -->
+<app-task-item *ngFor="let task of tasks" [task]="task"></app-task-item>
