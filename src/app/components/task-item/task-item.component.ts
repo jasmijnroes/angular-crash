@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Task } from '../../Task';
 // Deze moeten we erbij zetten omdat Task onze interface is
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-task-item',
@@ -13,4 +14,7 @@ export class TaskItemComponent {
 
   // @Input() task!: Task;
   // Dit kan ook: verteld typescript dat hij moet ignoren dat het not initialized is in de contructor.
+
+  faTimes = faTimes;
+  // Zodat je het nu in je html kan gebruiken.
 }
