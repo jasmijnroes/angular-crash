@@ -23,4 +23,8 @@ export class TasksComponent {
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
     // We call the getTasks method from the service.
   }
+
+  deleteTask(task: Task) {
+    // we want to call the service method which we havent created yet
+  }
 }
