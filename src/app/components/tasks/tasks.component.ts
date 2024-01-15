@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service';
 
-// import {Task} from '../../Task';
-import {TASKS} from '../../mock-tasks';
+import {Task} from '../../Task';
+// import {TASKS} from '../../mock-tasks';
 
 @Component({
   selector: 'app-tasks',
@@ -20,7 +20,7 @@ export class TasksComponent {
   // We hebben de service nodig, en deze moet in de constructor komen.
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
     // We call the getTasks method from the service.
   }
 }
