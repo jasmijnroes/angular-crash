@@ -22,3 +22,8 @@ export const TASKS: Task[] = [
     reminder: false,
   },
 ];
+
+// comments hier voor de db.json file omdat je daar geen comments in kunt plaatsen.
+// deze file handmatig aangemaakt
+// je kan meerdere collections maken. Nu doen wij even alleen tasks. 
+// kopier de data van mock-tasks, maar zet het tussen double quotes zodat het json is.
