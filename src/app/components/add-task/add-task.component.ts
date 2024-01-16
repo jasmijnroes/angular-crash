@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AddTaskComponent {
 
+  text: string = '';
+  day: string = '';
+  reminder: boolean = false;
+
 }
