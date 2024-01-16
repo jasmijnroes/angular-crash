@@ -27,4 +27,13 @@ export class TasksComponent {
   deleteTask(task: Task) {
     this.taskService.deleteTask(task).subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !== task.id)));
   }
+
+  toggleReminder(task: Task) {
+    task.reminder = !task.reminder;
+    // je zet m naar het tegenovergestelde van wat het was.
+
+    this.taskService.updateTaskReminder(task).subscribe();
+    // je moet het eerst in task.service.ts zetten, anders wordt het niet geupdate naar de database.
+    
+  }
 }
