@@ -25,6 +25,6 @@ export class TasksComponent {
   }
 
   deleteTask(task: Task) {
-    // we want to call the service method which we havent created yet
+    this.taskService.deleteTask(task).subscribe(() => (this.tasks = this.tasks.filter((t) => t.id !== task.id)));
   }
 }
