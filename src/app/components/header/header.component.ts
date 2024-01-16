@@ -14,7 +14,7 @@ export class HeaderComponent implements OnDestroy {
 
   constructor(private uiService: UiService) {
     this.subscription = this.uiService.onToggle().subscribe((value) => this.showAddTask = value);
-    // In de tutorial is deze constructor leeg, maar omdat ik een nieuwere versie van angualr gebruik, moet ik deze code toevoegen.
+    // de value is true of false
   }
 
   ngOnDestroy() {
