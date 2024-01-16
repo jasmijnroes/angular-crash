@@ -1,3 +1,4 @@
-<app-add-task></app-add-task>
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<!-- Hoewel je bij de onDeleteTask wel deleteTask(task) kunt doen, kan je niet addTask(task) doen. Dat komt omdat de deleteTask de ngFor gebruikt om over de tasks te loopen. -->
 
 <app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)"></app-task-item>

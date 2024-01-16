@@ -36,4 +36,9 @@ export class TasksComponent {
     // je moet het eerst in task.service.ts zetten, anders wordt het niet geupdate naar de database.
     
   }
+
+  addTask(task: Task) {
+    // this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
+    console.log(task);
+  }
 }
